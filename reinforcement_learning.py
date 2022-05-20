@@ -1506,7 +1506,7 @@ class Agent:
     instances of the Replay Memory and Neural Network.
     """
 
-    def __init__(self, env_name, training, render=False, use_logging=True):
+    def __init__(self, env_name, training, render=True, use_logging=True): #Cera - changed render to T
         """
         Create an object-instance. This also creates a new object for the
         Replay Memory and the Neural Network.
@@ -1529,7 +1529,7 @@ class Agent:
         """
 
         # Create the game-environment using OpenAI Gym.
-        self.env = gym.make(env_name)
+        self.env = gym.make(env_name, render_mode='human') #Cera - added render mode
 
         # The number of possible actions that the agent may take in every step.
         self.num_actions = self.env.action_space.n
