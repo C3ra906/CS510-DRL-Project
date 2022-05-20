@@ -1730,7 +1730,7 @@ class Agent:
 
             if not self.training and self.render:
                 # Render the game-environment to screen.
-                self.env.render() #changed "render to render_mode
+                self.env.render_mode('human') #Cera changed render to render_mode. Didn't work. Trying with 'human' passed as arg
 
                 # Insert a small pause to slow down the game,
                 # making it easier to follow for human eyes.
