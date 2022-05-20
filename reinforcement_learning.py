@@ -1506,7 +1506,7 @@ class Agent:
     instances of the Replay Memory and Neural Network.
     """
 
-    def __init__(self, env_name, training, render=True, use_logging=True): #Cera - changed render to T
+    def __init__(self, env_name, training, render=False, use_logging=True): #Cera - changed render to T to F
         """
         Create an object-instance. This also creates a new object for the
         Replay Memory and the Neural Network.
