@@ -1730,7 +1730,7 @@ class Agent:
 
             if not self.training and self.render:
                 # Render the game-environment to screen.
-                self.env.render_mode() #changed "render to render_mode
+                self.env.render() #changed "render to render_mode
 
                 # Insert a small pause to slow down the game,
                 # making it easier to follow for human eyes.
