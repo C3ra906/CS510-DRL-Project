@@ -1557,8 +1557,8 @@ class Agent:
         # Epsilon-greedy policy for selecting an action from the Q-values.
         # During training the epsilon is decreased linearly over the given
         # number of iterations. During testing the fixed epsilon is used.
-        self.epsilon_greedy = EpsilonGreedy(start_value=1.0, #original:1.0
-                                            end_value=0.15, #original:0.1
+        self.epsilon_greedy = EpsilonGreedy(start_value=1.0, 
+                                            end_value=0.1, 
                                             num_iterations=1e6,
                                             num_actions=self.num_actions,
                                             epsilon_testing=0.01)
@@ -1567,8 +1567,8 @@ class Agent:
             # The following control-signals are only used during training.
 
             # The learning-rate for the optimizer decreases linearly.
-            self.learning_rate_control = LinearControlSignal(start_value=1e-2, #original:1e-3
-                                                             end_value=1e-4, #original:1e-5
+            self.learning_rate_control = LinearControlSignal(start_value=1e-3, 
+                                                             end_value=1e-5, 
                                                              num_iterations=5e6)
 
             # The loss-limit is used to abort the optimization whenever the
