@@ -1529,7 +1529,7 @@ class Agent:
         """
 
         # Create the game-environment using OpenAI Gym.
-        self.env = gym.make(env_name, render_mode='human')
+        self.env = gym.make(env_name, render_mode='rgb_array')
 
         # The number of possible actions that the agent may take in every step.
         self.num_actions = self.env.action_space.n
